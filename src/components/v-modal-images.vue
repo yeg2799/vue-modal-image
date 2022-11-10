@@ -1,7 +1,8 @@
 <template lang="pug">
-  .v-modal-images
-    img.v-modal-images-img(:src="ext + source" @click="isOpen = !isOpen" alt="deneme")
-    span {{ description }}
+  .v-modal-image
+    .v-modal-image__item
+        img.v-modal-image__item-img(:src="ext + source" @click="isOpen = !isOpen" alt="deneme")
+        span.v-modal-image__item-description {{ description }}
     #modal(v-if="isOpen")
       span Modal
 </template>
@@ -36,4 +37,4 @@ export default {
 }
 </script>
 
-<style src="./v-modal-images.css" lang="css"></style>
+<style src="./v-modal-images.scss" lang="scss"></style>

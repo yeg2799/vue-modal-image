@@ -1,0 +1,10 @@
+.v-modal-image {
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &-img {
+            width: 50%;
+        }
+    }
+}
