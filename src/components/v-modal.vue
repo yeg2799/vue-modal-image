@@ -1,9 +1,9 @@
 <template lang="pug">
   .v-modal
     .v-modal__head
-        inline-svg.v-modal__head-download.v-modal__head-button(:src="require('@/assets/download.svg')" width="25" height="25" fill="white" @click="downloadImage(imgSource)")
-        inline-svg.v-modal__head-fullscreen.v-modal__head-button(:src="require('@/assets/fullscreen.svg')" width="25" height="25" fill="white" @click="fullScreenImage")
-        inline-svg.v-modal__head-rotate.v-modal__head-button(:src="require('@/assets/rotate.svg')" width="25" height="25" fill="white" @click="rotateImage")
+        inline-svg.v-modal__head-download.v-modal__head-button(v-if="!hideDownload" :src="require('@/assets/download.svg')" width="25" height="25" fill="white" @click="downloadImage(imgSource)")
+        inline-svg.v-modal__head-fullscreen.v-modal__head-button(v-if="!hideFullScreen" :src="require('@/assets/fullscreen.svg')" width="25" height="25" fill="white" @click="fullScreenImage")
+        inline-svg.v-modal__head-rotate.v-modal__head-button(v-if="!hideRotate" :src="require('@/assets/rotate.svg')" width="25" height="25" fill="white" @click="rotateImage")
         inline-svg.v-modal__head-close.v-modal__head-button(:src="require('@/assets/close.svg')" width="25" height="25" fill="white" @click="closeModal")
     .v-modal__middle
         img.v-modal-item(:src="imgSource" alt="deneme" :style="{ 'transform': `translate3d(0%, 0%, 0px) rotate(${rotateDeg}deg)` }" ref="imageRef")
@@ -20,7 +20,19 @@ export default {
             type: String,
             default: '',
             required: true,
-        }
+        },
+        hideDownload: {
+            type: Boolean,
+            default: false,
+        },
+        hideFullScreen: {          
+            type: Boolean,
+            default: false,
+        },
+        hideRotate: {          
+            type: Boolean,
+            default: false,
+        },
     },
     setup(props, {emit}) {
         const rotateDeg = ref(0);
@@ -50,7 +62,7 @@ export default {
 
         const fullScreenImage = () => {
             const image = imageRef.value.style;
-            
+
             if (isFullScreen.value) {
                 image.width = "50%";
                 image.height = "auto";
