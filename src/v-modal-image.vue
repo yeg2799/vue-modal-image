@@ -3,7 +3,7 @@
     .v-modal-image__item(v-if="!isOpen")
         img.v-modal-image__item-img(:src="ext + source" @click="isOpen = true" :alt="alt")
         span.v-modal-image__item-description {{ description }}
-    v-modal(v-if="isOpen" :imgSource="ext + source" @closeModal="closeModal" :alt="alt")
+    v-modal(v-if="isOpen" :imgSource="ext + source" @closeModal="closeModal" :alt="alt" :hideDownload="hideDownload" :hideFullScreen="hideFullScreen" :hideRotate="hideRotate")
 </template>
 
 <script>
@@ -33,7 +33,19 @@ export default {
         description: {
             type: String,
             default: '',
-        }
+        },
+        hideDownload: {
+            type: Boolean,
+            default: false,
+        },
+        hideFullScreen: {          
+            type: Boolean,
+            default: false,
+        },
+        hideRotate: {          
+            type: Boolean,
+            default: false,
+        },
     },
     setup() {
         const isOpen = ref(false);

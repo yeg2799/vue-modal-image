@@ -1,6 +1,9 @@
 .v-modal {
     background-color: #0b0b0c;
     height: 100vh;
+    position: absolute;
+    top: 0;
+    width: 100%;
 
     &__head {
         display: flex;
