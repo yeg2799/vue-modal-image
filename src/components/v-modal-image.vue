@@ -1,16 +1,20 @@
 <template lang="pug">
   .v-modal-image
-    .v-modal-image__item
-        img.v-modal-image__item-img(:src="ext + source" @click="isOpen = !isOpen" alt="deneme")
+    .v-modal-image__item(v-if="!isOpen")
+        img.v-modal-image__item-img(:src="ext + source" @click="isOpen = true" alt="deneme")
         span.v-modal-image__item-description {{ description }}
-    #modal(v-if="isOpen")
-      span Modal
+    v-modal(v-if="isOpen" :imgSource="ext + source" @closeModal="closeModal")
 </template>
 
 <script>
 import { ref } from 'vue'
+import VModal from './v-modal.vue'
+
 export default {
     name: "VModalImages",
+    components: {
+        VModal
+    },
     props: {
         ext: {
             type: String,
@@ -30,8 +34,13 @@ export default {
     setup() {
         const isOpen = ref(false);
 
+        const closeModal = () => {
+            isOpen.value = false;
+        }
+ 
         return {
-        isOpen
+        isOpen,
+        closeModal,
         }
     }
 }

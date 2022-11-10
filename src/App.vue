@@ -1,16 +1,16 @@
 <template lang="pug">
   #app
-    v-modal-images(ext="https://i.imgur.com/" source="V4fWcfi.jpg" description="bu bir açıklama")
+    v-modal-image(ext="https://i.imgur.com/" source="V4fWcfi.jpg" description="this is description")
 </template>
 
 <script>
 
-import VModalImages from '@/components/v-modal-images';
+import VModalImage from '@/components/v-modal-image';
 
 export default {
   name: 'App',
   components: {
-    VModalImages
+    VModalImage
   },
 }
 </script>

@@ -1,0 +1,16 @@
+.v-modal {
+    background-color: #0b0b0c;
+    height: 100vh;
+    &-item {
+        position:absolute;
+        top: 25%;
+        left: 25%;
+        width: 50%;
+    }
+
+    &__close-button {
+        position:absolute;
+        right: 0;
+        cursor: pointer;
+    }
+}
