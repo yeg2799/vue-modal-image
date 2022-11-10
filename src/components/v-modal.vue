@@ -1,7 +1,7 @@
 <template lang="pug">
   .v-modal
     .v-modal__head
-        inline-svg.v-modal__head-download.v-modal__head-button(:src="require('@/assets/download.svg')" width="25" height="25" fill="white" @click="closeModal")
+        inline-svg.v-modal__head-download.v-modal__head-button(:src="require('@/assets/download.svg')" width="25" height="25" fill="white" @click="downloadImage(imgSource)")
         inline-svg.v-modal__head-fullscreen.v-modal__head-button(:src="require('@/assets/fullscreen.svg')" width="25" height="25" fill="white" @click="closeModal")
         inline-svg.v-modal__head-rotate.v-modal__head-button(:src="require('@/assets/rotate.svg')" width="25" height="25" fill="white" @click="rotateImage")
         inline-svg.v-modal__head-close.v-modal__head-button(:src="require('@/assets/close.svg')" width="25" height="25" fill="white" @click="closeModal")
@@ -34,11 +34,25 @@ export default {
             rotateDeg.value === 360 ? rotateDeg.value = 90 : rotateDeg.value += 90;
         }
 
+        const downloadImage = async source => {
+            const image = await fetch(source)
+            const imageBlog = await image.blob()
+            const imageURL = URL.createObjectURL(imageBlog)
+
+            const link = document.createElement('a')
+            link.href = imageURL
+            link.download = 'image file name here'
+            document.body.appendChild(link)
+            link.click()
+            document.body.removeChild(link)
+        }
+
         return {
             closeModal,
             rotateDeg,
             rotateImage,
             imageRef,
+            downloadImage
         }
     }
 } 
