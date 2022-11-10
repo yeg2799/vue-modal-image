@@ -1,9 +1,9 @@
 <template lang="pug">
   .v-modal-image
     .v-modal-image__item(v-if="!isOpen")
-        img.v-modal-image__item-img(:src="ext + source" @click="isOpen = true" alt="deneme")
+        img.v-modal-image__item-img(:src="ext + source" @click="isOpen = true" :alt="alt")
         span.v-modal-image__item-description {{ description }}
-    v-modal(v-if="isOpen" :imgSource="ext + source" @closeModal="closeModal")
+    v-modal(v-if="isOpen" :imgSource="ext + source" @closeModal="closeModal" :alt="alt")
 </template>
 
 <script>
@@ -25,6 +25,10 @@ export default {
             type: String,
             default: 'V4fWcfi.jpg',
             required: true,
+        },
+        alt: {
+            type: String,
+            default: '',
         },
         description: {
             type: String,

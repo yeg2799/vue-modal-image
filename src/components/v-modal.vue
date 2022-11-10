@@ -6,8 +6,7 @@
         inline-svg.v-modal__head-rotate.v-modal__head-button(v-if="!hideRotate" :src="require('@/assets/rotate.svg')" width="25" height="25" fill="white" @click="rotateImage")
         inline-svg.v-modal__head-close.v-modal__head-button(:src="require('@/assets/close.svg')" width="25" height="25" fill="white" @click="closeModal")
     .v-modal__middle
-        img.v-modal-item(:src="imgSource" alt="deneme" :style="{ 'transform': `translate3d(0%, 0%, 0px) rotate(${rotateDeg}deg)` }" ref="imageRef")
-    //- span.v-modal-image__item-description {{ description }}
+        img.v-modal-item(:src="imgSource" :alt="alt" :style="{ 'transform': `translate3d(0%, 0%, 0px) rotate(${rotateDeg}deg)` }" ref="imageRef")
 </template>
 
 <script>
@@ -20,6 +19,10 @@ export default {
             type: String,
             default: '',
             required: true,
+        },
+        alt: {
+            type: String,
+            default: '',
         },
         hideDownload: {
             type: Boolean,
