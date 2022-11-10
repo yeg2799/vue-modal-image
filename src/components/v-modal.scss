@@ -1,6 +1,17 @@
 .v-modal {
     background-color: #0b0b0c;
     height: 100vh;
+
+    &__head {
+        display: flex;
+        justify-content: flex-end;
+
+        &-button {
+            cursor: pointer;
+            margin-top: 20px;
+            margin-right: 20px;
+        }
+    }
     &-item {
         position:absolute;
         top: 25%;
@@ -8,9 +19,5 @@
         width: 50%;
     }
 
-    &__close-button {
-        position:absolute;
-        right: 0;
-        cursor: pointer;
-    }
+
 }
