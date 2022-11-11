@@ -1,7 +1,7 @@
 <template lang="pug">
   .v-modal-image
     .v-modal-image__item(v-if="!isOpen")
-        img.v-modal-image__item-img(:src="ext + source" @click="isOpen = true" :alt="alt")
+        img.v-modal-image__item-img(:src="ext + source" @click="openModal" :alt="alt")
         span.v-modal-image__item-description {{ description }}
     v-modal(v-if="isOpen" :imgSource="ext + source" @closeModal="closeModal" :alt="alt" :hideDownload="hideDownload" :hideFullScreen="hideFullScreen" :hideRotate="hideRotate")
 </template>
@@ -53,10 +53,15 @@ export default {
         const closeModal = () => {
             isOpen.value = false;
         }
+
+        const openModal = () => {
+             isOpen.value = true;
+        }
  
         return {
         isOpen,
         closeModal,
+        openModal,
         }
     }
 }

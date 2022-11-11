@@ -1,7 +1,9 @@
 .v-modal {
     background-color: #0b0b0c;
     height: 100vh;
-    position: absolute;
+    position: fixed;
+    z-index: 5000;
+    overflow: visible;
     top: 0;
     width: 100%;
 
