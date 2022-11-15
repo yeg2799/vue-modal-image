@@ -1,9 +1,10 @@
-<template lang="pug">
-  .v-modal-image
-    .v-modal-image__item(v-if="!isOpen")
-        img.v-modal-image__item-img(:src="ext + source" @click="openModal" :alt="alt")
-        span.v-modal-image__item-description {{ description }}
-    v-modal(v-if="isOpen" :imgSource="ext + source" @closeModal="closeModal" :alt="alt" :hideDownload="hideDownload" :hideFullScreen="hideFullScreen" :hideRotate="hideRotate")
+<template>
+<div class="v-modal-image">
+  <div class="v-modal-image__item" v-if="!isOpen"><img class="v-modal-image__item-img" :src="ext + source" @click="openModal" :alt="alt"/>
+    <span class="v-modal-image__item-description">{{ description }}</span>
+  </div>
+  <v-modal v-if="isOpen" :imgSource="ext + source" @closeModal="closeModal" :alt="alt" :hideDownload="hideDownload" :hideZoom="hideZoom" :hideRotate="hideRotate"></v-modal>
+</div>
 </template>
 
 <script>
@@ -38,7 +39,7 @@ export default {
             type: Boolean,
             default: false,
         },
-        hideFullScreen: {          
+        hideZoom: {          
             type: Boolean,
             default: false,
         },

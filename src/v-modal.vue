@@ -1,16 +1,23 @@
-<template lang="pug">
-  .v-modal
-    .v-modal__head
-        .v-modal__head-download.v-modal__head-button(v-if="!hideDownload" @click="downloadImage(imgSource)")
-            download-icon
-        .v-modal__head-fullscreen.v-modal__head-button(v-if="!hideZoom" @click="fullScreenImage")
-            zoom-icon
-        .v-modal__head-rotate.v-modal__head-button(v-if="!hideRotate" @click="rotateImage")
-            rotate-icon
-        .v-modal__head-close.v-modal__head-button(@click="closeModal")
-            close-icon
-    .v-modal__middle
-        img.v-modal-item(:src="imgSource" :alt="alt" :style="{ 'transform': `translate3d(0%, 0%, 0px) rotate(${rotateDeg}deg)` }" ref="imageRef")
+<template>
+<div class="v-modal">
+    <div class="v-modal__head">
+        <div class="v-modal__head-download v-modal__head-button" v-if="!hideDownload" @click="downloadImage(imgSource)">
+            <download-icon />
+        </div>
+        <div class="v-modal__head-fullscreen v-modal__head-button" v-if="!hideZoom" @click="fullScreenImage">
+            <zoom-icon />
+        </div>
+        <div class="v-modal__head-rotate v-modal__head-button" v-if="!hideRotate" @click="rotateImage">
+            <rotate-icon />
+        </div>
+        <div class="v-modal__head-close v-modal__head-button" @click="closeModal">
+            <close-icon />
+        </div>
+    </div>
+    <div class="v-modal__middle">
+        <img class="v-modal-item" :src="imgSource" :alt="alt" :style="{ 'transform': `translate3d(0%, 0%, 0px) rotate(${rotateDeg}deg)` }" ref="imageRef" />
+    </div>
+</div>
 </template>
 
 <script>

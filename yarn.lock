@@ -7345,9 +7345,9 @@ postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.14, postcss@^7.0.27, postcss@^7.0.3
     source-map "^0.6.1"
 
 postcss@^8.4.14:
-  version "8.4.18"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.18.tgz#6d50046ea7d3d66a85e0e782074e7203bc7fbca2"
-  integrity sha512-Wi8mWhncLJm11GATDaQKobXSNEYGUHeQLiQqDFG1qQ5UTDPTEvKw0Xt5NsTpktGTwLps3ByrWsBrG0rB8YQ9oA==
+  version "8.4.19"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.19.tgz#61178e2add236b17351897c8bcc0b4c8ecab56fc"
+  integrity sha512-h+pbPsyhlYj6N2ozBmHhHrs9DzGmbaarbLvWipMRO7RLS+v4onj26MPFXA5OBYFxyqYhUJK456SwDcY9H2/zsA==
   dependencies:
     nanoid "^3.3.4"
     picocolors "^1.0.0"
@@ -7517,13 +7517,6 @@ pug-parser@^6.0.0:
   dependencies:
     pug-error "^2.0.0"
     token-stream "1.0.0"
-
-pug-plain-loader@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/pug-plain-loader/-/pug-plain-loader-1.1.0.tgz#59f3b475284871afcd6a18d2ad3318b150fdc533"
-  integrity sha512-1nYgIJLaahRuHJHhzSPODV44aZfb00bO7kiJiMkke6Hj4SVZftuvx6shZ4BOokk50dJc2RSFqNUBOlus0dniFQ==
-  dependencies:
-    loader-utils "^1.1.0"
 
 pug-runtime@^3.0.0, pug-runtime@^3.0.1:
   version "3.0.1"
@@ -9292,11 +9285,6 @@ vue-hot-reload-api@^2.3.0:
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.4.tgz#532955cc1eb208a3d990b3a9f9a70574657e08f2"
   integrity sha512-BXq3jwIagosjgNVae6tkHzzIk6a8MHFtzAdwhnV5VlvPTFxDCvIttgSiHWjdGoTJvXtmRu5HacExfdarRcFhog==
 
-vue-inline-svg@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/vue-inline-svg/-/vue-inline-svg-2.1.1.tgz#254485bf79a45d148d357a6990b8914219699e36"
-  integrity sha512-1m3UdbEneSHH4BTa2Bju/jnFy4QIHdhIWtGvkrkQRY03lJaM4JJ+hZBrgZw1jIB54SUh+5NYUiFEelnMz+DHQw==
-
 "vue-loader-v16@npm:vue-loader@^16.1.0":
   version "16.8.3"
   resolved "https://registry.yarnpkg.com/vue-loader/-/vue-loader-16.8.3.tgz#d43e675def5ba9345d6c7f05914c13d861997087"
@@ -9316,11 +9304,6 @@ vue-loader@^15.9.2:
     loader-utils "^1.1.0"
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
-
-vue-pug-plugin@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/vue-pug-plugin/-/vue-pug-plugin-2.0.3.tgz#cb8e24f80902610496f8e800dae8c6debc624b06"
-  integrity sha512-GiI1VoNDZveoX8PgIEjxLanNwGNUAbIbu0pe0jn4D6abObLqD6y8yJp5wCkqEBwfNq3a0TzwPO+gMC2QzKm9ow==
 
 vue-style-loader@^4.1.0, vue-style-loader@^4.1.2:
   version "4.1.3"
