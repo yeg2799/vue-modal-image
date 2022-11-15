@@ -1,9 +1,9 @@
 <template lang="pug">
   #app
-    v-modal-image(ext="https://i.imgur.com/" source="V4fWcfi.jpg" description="HideDownload Button" hideDownload)
-    v-modal-image(ext="https://i.imgur.com/" source="V4fWcfi.jpg" description="HideDownload Button" hideDownload)
-    v-modal-image(ext="https://i.imgur.com/" source="V4fWcfi.jpg" description="HideDownload Button" hideDownload)
-    v-modal-image(ext="https://i.imgur.com/" source="V4fWcfi.jpg" description="HideDownload Button" hideDownload)
+    v-modal-image(ext="https://i.imgur.com/" source="V4fWcfi.jpg" description="Hide Download Button" hideDownload)
+    v-modal-image(ext="https://i.imgur.com/" source="V4fWcfi.jpg" description="Hide FullScreen Button" hideFullScreen)
+    v-modal-image(ext="https://i.imgur.com/" source="V4fWcfi.jpg" description="Hide Rotate Button" hideRotate)
+    v-modal-image(ext="https://i.imgur.com/" source="V4fWcfi.jpg" description="Hide All Buttons" hideDownload hideFullScreen hideRotate)
 </template>
 
 <script>
