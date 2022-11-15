@@ -68,4 +68,4 @@ export default {
 }
 </script>
 
-<style src="./v-modal-images.scss" lang="scss"></style>
+<style src="./v-modal-images.css" lang="css"></style>

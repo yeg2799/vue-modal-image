@@ -1,0 +1,29 @@
+.v-modal {
+    background-color: #0b0b0c;
+    height: 100vh;
+    position: fixed;
+    z-index: 5000;
+    overflow: visible;
+    top: 0;
+    width: 100%;
+}
+.v-modal__head {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 0;
+}
+.v-modal__head-button {
+    cursor: pointer;
+    margin-right: 20px;
+}
+.v-modal-item {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+}
+svg {
+    width: 25px;
+    height: 25px;
+    fill: white;
+}

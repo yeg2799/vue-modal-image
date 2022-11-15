@@ -112,4 +112,4 @@ export default {
 } 
 </script>
 
-<style src="./v-modal.scss" lang="scss"></style>
+<style src="./v-modal.css" lang="css"></style>
