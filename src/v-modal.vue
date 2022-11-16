@@ -2,16 +2,16 @@
 <div class="v-modal">
     <div class="v-modal__head">
         <div class="v-modal__head-download v-modal__head-button" v-if="!hideDownload" @click="downloadImage(imgSource)">
-            <download-icon />
+            <DownloadIcon />
         </div>
         <div class="v-modal__head-fullscreen v-modal__head-button" v-if="!hideZoom" @click="fullScreenImage">
-            <zoom-icon />
+            <ZoomIcon />
         </div>
         <div class="v-modal__head-rotate v-modal__head-button" v-if="!hideRotate" @click="rotateImage">
-            <rotate-icon />
+            <RotateIcon />
         </div>
         <div class="v-modal__head-close v-modal__head-button" @click="closeModal">
-            <close-icon />
+            <CloseIcon />
         </div>
     </div>
     <div class="v-modal__middle">

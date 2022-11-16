@@ -3,7 +3,7 @@
   <div class="v-modal-image__item" v-if="!isOpen"><img class="v-modal-image__item-img" :src="ext + source" @click="openModal" :alt="alt"/>
     <span class="v-modal-image__item-description">{{ description }}</span>
   </div>
-  <v-modal v-if="isOpen" :imgSource="ext + source" @closeModal="closeModal" :alt="alt" :hideDownload="hideDownload" :hideZoom="hideZoom" :hideRotate="hideRotate"></v-modal>
+  <VModal v-if="isOpen" :imgSource="ext + source" @closeModal="closeModal" :alt="alt" :hideDownload="hideDownload" :hideZoom="hideZoom" :hideRotate="hideRotate" />
 </div>
 </template>
 
