@@ -1,24 +1,45 @@
-# vue-modal-images
+# vue-modal-image
 
-## Project setup
+## Features
+
+- Zero dependencies.
+- Esc, Enter & click outside the image close the lightbox
+- User can zoom & move the image or download the highest quality one
+- Download, Zoom and Rotate -buttons can be hidden.
+- Image alt shown as title
+
+## Simple API
+
+## Getting started
+
+### Installation
+
+```shell
+npm install vue-modal-image
 ```
-yarn install
+Add dependencies to your `main.js`:
+
+```javascript
+import Vue from 'vue'
+import ModalImage from 'vue-modal-image'
+
+Vue.use(ModalImage)
 ```
 
-### Compiles and hot-reloads for development
-```
-yarn serve
+Add the global component to your `App.vue`:
+
+```js
+<ModalImage ext="https://i.imgur.com/" source="V4fWcfi.jpg" description="description" hideDownload />;
 ```
 
-### Compiles and minifies for production
-```
-yarn build
-```
+| Prop                   | Type      | Description                                                                                                   |
+| ---------------------- | --------- | ------------------------------------------------------------------------------------------------------------- |
+| `alt`                  | `String`  | Optional. `alt` for the the heading text in image.                                                       |
+| `description`          | `String`  | Optional. `description` for the the description text in ModalImage.                                           |
+| `ext`                  | `URL`     | `ext` for the image.                                                                                          |
+| `source`               | `URL`     | `source` for the image.                                                                                       |
+| `hideDownload`         | `boolean` | Optional. Set to `false` to hide download-button from the ModalImage.                                         |
+| `hideZoom`             | `boolean` | Optional. Set to `false` to hide zoom-button from the ModalImage.                                             |
+| `hideZoom`             | `boolean` | Optional. Set to `false` to show rotate-button within the ModalImage.                                         |
 
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+[npm]: https://www.npmjs.com/package/vue-modal-images
