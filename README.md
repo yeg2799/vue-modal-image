@@ -29,14 +29,13 @@ Vue.use(ModalImage)
 Add the global component to your `App.vue`:
 
 ```js
-<ModalImage ext="https://i.imgur.com/" source="V4fWcfi.jpg" description="description" hideDownload />;
+   <VModalImage source="https://i.imgur.com/V4fWcfi.jpg" description="Hide Download Button" hideDownload @onclosedModal="onclosedModal" />
 ```
 
 | Prop                   | Type      | Description                                                                                                   |
 | ---------------------- | --------- | ------------------------------------------------------------------------------------------------------------- |
-| `alt`                  | `String`  | Optional. `alt` for the the heading text in image.                                                       |
+| `alt`                  | `String`  | Optional. `alt` for the the heading text in image.                                                            |
 | `description`          | `String`  | Optional. `description` for the the description text in ModalImage.                                           |
-| `ext`                  | `URL`     | `ext` for the image.                                                                                          |
 | `source`               | `URL`     | `source` for the image.                                                                                       |
 | `hideDownload`         | `boolean` | Optional. Set to `false` to hide download-button from the ModalImage.                                         |
 | `hideZoom`             | `boolean` | Optional. Set to `false` to hide zoom-button from the ModalImage.                                             |

@@ -1,9 +1,9 @@
 <template>
  <div id="app">
-    <VModalImage ext="https://i.imgur.com/" source="V4fWcfi.jpg" description="Hide Download Button" hideDownload="hideDownload" />
-    <VModalImage ext="https://i.imgur.com/" source="V4fWcfi.jpg" description="Hide Zoom Button" hideZoom="hideZoom" />
-    <VModalImage ext="https://i.imgur.com/" source="V4fWcfi.jpg" description="Hide Rotate Button" hideRotate="hideRotate" />
-    <VModalImage ext="https://i.imgur.com/" source="V4fWcfi.jpg" description="Hide All Buttons" hideDownload="hideDownload" hideZoom="hideZoom" hideRotate="hideRotate" />
+    <VModalImage source="https://i.imgur.com/V4fWcfi.jpg" description="Hide Download Button" hideDownload @onclosedModal="onclosedModal"/>
+    <VModalImage source="https://i.imgur.com/V4fWcfi.jpg" description="Hide Zoom Button" hideZoom />
+    <VModalImage source="https://i.imgur.com/V4fWcfi.jpg" description="Hide Rotate Button" hideRotate />
+    <VModalImage source="https://i.imgur.com/V4fWcfi.jpg" description="Hide All Buttons" hideDownload= hideZoom hideRotate />
 </div>
 </template>
 
@@ -16,5 +16,13 @@ export default {
   components: {
     VModalImage
   },
+  setup() {
+    const onclosedModal = () => {
+      console.log('onclosedModal');
+    }
+    return {
+      onclosedModal,
+    }
+  }
 }
 </script>

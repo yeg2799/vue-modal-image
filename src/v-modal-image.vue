@@ -1,9 +1,10 @@
 <template>
 <div class="v-modal-image">
-  <div class="v-modal-image__item" v-if="!isOpen"><img class="v-modal-image__item-img" :src="ext + source" @click="openModal" :alt="alt"/>
+  <div class="v-modal-image__item" v-if="!isOpen">
+    <img class="v-modal-image__item-img" :src="source" @click="openModal" :alt="alt"/>
     <span class="v-modal-image__item-description">{{ description }}</span>
   </div>
-  <VModal v-if="isOpen" :imgSource="ext + source" @closeModal="closeModal" :alt="alt" :hideDownload="hideDownload" :hideZoom="hideZoom" :hideRotate="hideRotate" />
+  <VModal v-if="isOpen" :imgSource="source" @closeModal="closeModal" :alt="alt" :hideDownload="hideDownload" :hideZoom="hideZoom" :hideRotate="hideRotate" />
 </div>
 </template>
 
@@ -17,14 +18,9 @@ export default {
         VModal
     },
     props: {
-        ext: {
-            type: String,
-            default: 'https://i.imgur.com/',
-            required: true,
-        }, 
         source: {
             type: String,
-            default: 'V4fWcfi.jpg',
+            default: 'https://i.imgur.com/V4fWcfi.jpg',
             required: true,
         },
         alt: {
@@ -48,11 +44,12 @@ export default {
             default: false,
         },
     },
-    setup() {
+    setup(props, { emit }) {
         const isOpen = ref(false);
 
         const closeModal = () => {
             isOpen.value = false;
+            emit('onclosedModal')
         }
 
         const openModal = () => {
